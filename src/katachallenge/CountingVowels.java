@@ -10,15 +10,17 @@ public class CountingVowels {
 	public static void main(String[] args) {
 		 
 		long startTimeV1 = System.nanoTime();
-		System.out.println(countThisCharacter("For loop " + TEXT, ch2));
+		System.out.println(countThisCharacter( TEXT, ch2));
 		displayExecutionTime(System.nanoTime()-startTimeV1);
 		long startTimeV2 = System.nanoTime();
-		System.out.println(countThisCharLambda("lambda " + TEXT, ch2));
+		System.out.println(countThisCharLambda( TEXT, ch2));
 		displayExecutionTime(System.nanoTime()-startTimeV2);
 
 	}
 //functional style
 	private static long countThisCharLambda(String text2, char ch2) {
+		System.out.println("lambda functional!");
+
 		return text2.chars().filter(c -> c == ch2).count();
 	}
 
@@ -27,6 +29,7 @@ public class CountingVowels {
 		for(int i = 0; i < text2.length(); i++) {
 			if(text2.charAt(i) == ch2) counter++;
 		}
+		System.out.println("forloop!");
 		return counter;
 	}
 	private static void displayExecutionTime(long time) {
