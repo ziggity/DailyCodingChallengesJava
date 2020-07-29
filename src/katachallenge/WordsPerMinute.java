@@ -39,7 +39,7 @@ public class WordsPerMinute {
 		int wpm = (int) ((((double) numChars / 5) / seconds) * 60);
 		int accuracy = 0;
 		
-		System.out.println("your wpm is " + wpm + "and your accuracy is " + checkAccuracy(typedWords));
+		System.out.println("your wpm is " + wpm + " and your accuracy is " + checkAccuracy(typedWords));
 		System.out.println(typedWords);
 		
 	}
@@ -50,7 +50,6 @@ public class WordsPerMinute {
 			if(typedWords instanceof String) return 99;
 			if(typedWords.contentEquals(randomWords))return 100;
 			return -1;
-
 		}
 
 }
