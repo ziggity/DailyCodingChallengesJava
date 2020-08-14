@@ -9,13 +9,18 @@ public class Fibonacci {
 	    // table f[] 
 	    public static int fib(int n) 
 	    { 
+	    	final String MSG = "Hello";
+	    	String greeting = MSG + ", world!";
+	    	greeting = "Hello, John!";
+	    	String hello = greeting + MSG;
+	    	
 	        // Base cases 
 	        if (n == 0) 
 	            return 0; 
 	              
 	        if (n == 1 || n == 2) 
 	            return (f[n] = 1); 
-	       
+	     
 	        // If fib(n) is already computed 
 	        if (f[n] != 0) 
 	            return f[n]; 
